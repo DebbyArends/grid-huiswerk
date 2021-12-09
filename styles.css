@@ -1,2 +1,76 @@
 /*Maak hier jouw CSS!*/
-.container
+/*dit is de mobiele grid*/
+.container {
+    background-color: hsl(0, 30%, 95%);
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+            "item-a"
+            "item-b"
+            "item-c"
+            "item-d"
+            "item-e"
+            " . "
+            "item-f";
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-a {
+    background-color: hsl(350,75%,64%);
+    grid-area: item-a;
+    border: 2px solid darkred;
+}
+
+#item-b {
+    background-color: hsl(350,75%,64%);
+    grid-area: item-b;
+    border: 2px solid darkred;
+}
+
+#item-c {
+    background-color: hsl(350,75%,64%);
+    grid-area: item-c;
+    border: 2px solid darkred;
+}
+
+#item-d {
+    background-color: hsl(350,75%,64%);
+    grid-area: item-d;
+    border: 2px solid darkred;
+}
+
+#item-e {
+    background-color: hsl(350,75%,64%);
+    grid-area: item-e;
+    border: 2px solid darkred;
+}
+
+#item-f {
+    background-color: hsl(350,75%,64%);
+    grid-area: item-f;
+    border: 2px solid darkred;
+}
+@media screen and (min-width: 576px) {
+    /*dit is de desktop grid*/
+    .container {
+        background-color: hsl(0, 30%, 95%);
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+            "item-a item-c item-c"
+            "item-b item-c item-c"
+            "item-b item-e item-d"
+            "item-b item-e . "
+            "item-f item-f item-f";
+    }
+}
